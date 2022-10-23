@@ -1,5 +1,4 @@
-<LinearLayout
-    android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -7,7 +6,8 @@
     android:padding="22dp">
 
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/inputValue"
+        style="@android:style/Widget.Holo.EditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autofillHints="name"
@@ -15,9 +15,11 @@
         android:hint="@string/editTextHint"
         android:inputType="numberSigned|numberDecimal"
         android:outlineAmbientShadowColor="@color/black"
-        android:singleLine="false"
         android:textColor="@color/black"
-        android:textColorHint="@color/black" />
+        android:textColorHighlight="@color/black"
+        android:textColorHint="@color/black"
+        android:textColorLink="@color/black"
+        android:textCursorDrawable="@color/black" />
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,16 +31,18 @@
             android:id="@+id/radio0"
             android:checked="true"
             android:text="@string/celsius"
-            />
+            android:textColor="@color/black"/>
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/radio1"
+            android:textColor="@color/black"
             android:text="@string/fahrenheit"/>
 
     </RadioGroup>
 
     <Button
+        android:id="@+id/calculateButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/calc" />
